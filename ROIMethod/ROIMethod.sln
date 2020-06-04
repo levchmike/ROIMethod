@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ROIMethod", "ROIMethod\ROIMethod.csproj", "{B4BFFECE-9BDC-4F5B-BE07-943A2A0EAD26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ROIMethod.DataConnectionTemplates", "ROIMethod.DataConnectionTemplates\ROIMethod.DataConnectionTemplates.csproj", "{13649CDE-80DB-4FBB-A7CE-47CD647AFB22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ROIMethod.DataInfrastructure", "ROIMethod.DataInfrastructure\ROIMethod.DataInfrastructure.csproj", "{26C1655E-891C-4B44-B192-7E6035124A2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ROIMethod.WebAPI.Core", "ROIMethod.WebAPI.Core\ROIMethod.WebAPI.Core.csproj", "{02555371-8E37-4C7B-BC9A-1FC7B8539355}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4BFFECE-9BDC-4F5B-BE07-943A2A0EAD26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4BFFECE-9BDC-4F5B-BE07-943A2A0EAD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4BFFECE-9BDC-4F5B-BE07-943A2A0EAD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4BFFECE-9BDC-4F5B-BE07-943A2A0EAD26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13649CDE-80DB-4FBB-A7CE-47CD647AFB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13649CDE-80DB-4FBB-A7CE-47CD647AFB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13649CDE-80DB-4FBB-A7CE-47CD647AFB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13649CDE-80DB-4FBB-A7CE-47CD647AFB22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C1655E-891C-4B44-B192-7E6035124A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C1655E-891C-4B44-B192-7E6035124A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C1655E-891C-4B44-B192-7E6035124A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C1655E-891C-4B44-B192-7E6035124A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02555371-8E37-4C7B-BC9A-1FC7B8539355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02555371-8E37-4C7B-BC9A-1FC7B8539355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02555371-8E37-4C7B-BC9A-1FC7B8539355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02555371-8E37-4C7B-BC9A-1FC7B8539355}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C3C39CD-2337-4410-B059-AFA13B77CA7E}
+	EndGlobalSection
+EndGlobal

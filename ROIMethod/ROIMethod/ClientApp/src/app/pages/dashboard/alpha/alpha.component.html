@@ -1,0 +1,62 @@
+<div class="cui__utils__heading mb-3">
+  <strong class="text-uppercase font-size-16">Статистика на сегодня</strong>
+</div>
+<div class="row">
+  <div class="col-xl-4">
+    <div class="card">
+      <kit-chart-11></kit-chart-11>
+    </div>
+  </div>
+  <div class="col-xl-4">
+    <div class="card">
+      <kit-chart-11v1></kit-chart-11v1>
+    </div>
+  </div>
+  <div class="col-xl-4">
+    <div class="card">
+      <kit-chart-11v2></kit-chart-11v2>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="cui__utils__heading mb-0">
+          <strong>Планирование</strong>
+        </div>
+        <div class=" text-muted">
+          Детальное планирование по источникам рекламы
+        </div>
+      </div>
+      <div class="card-body">
+        <nz-table [nzData]="displayReferalsData" [nzShowPagination]="false" class="kit__utils__table">
+          <thead (nzSortChange)="sort($event)">
+            <tr>
+              <th>Источник</th>
+              <th>Клики</th>
+              <th>Расход</th>
+              <th nzShowSort nzColumnKey="price">Цена клика</th>
+              <th>Цена</th>
+              <th nzShowSort nzColumnKey="conversion">Конверсия</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of referalsData">
+              <td>{{item.descriptionInfo}}</td>
+              <td>{{item.clicks}}</td>
+              <td>{{item.expend}}</td>
+              <td>{{item.price}}</td>
+              <td>{{item.priceClient}}</td>
+              <td>{{item.conversion}}</td>
+            </tr>
+          </tbody>
+        </nz-table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
