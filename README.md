@@ -41,6 +41,14 @@ p.s. не использовал Docker
 
 *Так или иначе, best practice советуют разделять Frontend (в моем случае Angular) и серверную часть, чтобы абстрагироваться от рабочего окружения (Visual Studio).*
 
+**Big Query сервис** - взаимодействие сервера с Google Cloud Platform. Реализован сервис **DataBQService** на уровне **WebAPI.Core**
+
+### Big Query проект ROIMethod
+![](https://i.ibb.co/MBSbJyy/bigquerysc.png)
+
+### Загрузка данных с BQ
+![](https://i.ibb.co/k8cstC0/bq.png)
+
 ### Скрин веб-приложения
 
 ![](https://i.ibb.co/bBRHw09/mainscreen.png)
