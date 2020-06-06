@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class StatisticDataService {
 
-  private url = "/api/statistic";
+  private url = "/api/statisticbq";
 
   constructor(private http: HttpClient) {
   }

@@ -9,33 +9,45 @@ using Microsoft.Extensions.Hosting;
 using Ninject.Modules;
 using ROIMethod.Controllers;
 using ROIMethod.DataConnectionTemplates.MSQLTemplate;
+using ROIMethod.DataInfrastructure.DataUtils;
 using ROIMethod.DataInfrastructure.DataUtils.Repositories._Interfaces;
 using ROIMethod.WebAPI.Core.CaseServices;
 using ROIMethod.WebAPI.Core.CaseServices.Interface;
+using System.IO;
 
 namespace ROIMethod
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment hostEnvironment)
         {
             Configuration = configuration;
+            CRoot = hostEnvironment.WebRootPath;
         }
 
         public IConfiguration Configuration { get; }
-
+        public string CRoot { get; }
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
 
-            services.AddTransient<IStatisticService, StatisticService>();
+            #region Dependencies
+            services.AddTransient<IConfigBQConnection, ConfigBQConnection>(serviceProvider =>
+            {
 
+                var connectionString = Path.Combine(CRoot, "bq-auth.json");
+                return new ConfigBQConnection(connectionString);
+            });
+            services.AddTransient<IBigQueryService, BigQueryService>();
+            services.AddTransient<IBQStatisticService, DataBQService>();
+            services.AddTransient<IStatisticService, StatisticService>();
             services.AddTransient<IAppDataConnection,DataContext>(serviceProvider =>
             {
                 var connectionString = Configuration["ConnectionStrings:DefaultConnection"];
                 return new DataContext(connectionString);
             });
-          
+            #endregion
+
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
